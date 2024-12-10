@@ -13,15 +13,14 @@
  */
 int binary_tree_is_full(const binary_tree_t *tree)
 {
-int size = 0;
-
-	if (!tree)
+	if (tree == NULL)
 		return (0);
 
-	if (tree->left && tree->right && tree->parent)
-	size++;
-	binary_tree_is_full(tree->left);
-	binary_tree_is_full(tree->right);
+	if (tree->left == NULL && tree->right == NULL)
+		return (1);
 
-	return (size);
+	if (tree->left && tree->right)
+		return (binary_tree_is_full(tree->left) && binary_tree_is_full(tree->right));
+
+	return (0);
 }
