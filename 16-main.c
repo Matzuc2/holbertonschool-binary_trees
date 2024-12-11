@@ -13,7 +13,7 @@ int main(void)
 	int perfect;
 
 	root = binary_tree_node(NULL, 98);
-	root->left = binary_tree_node(root, 12);
+	root->left = binary_tree_node(root, 68);
 	root->right = binary_tree_node(root, 402);
 	binary_tree_insert_right(root->left, 54);
 	binary_tree_insert_right(root, 128);
